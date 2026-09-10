@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GCtrabalhos.iml" filepath="$PROJECT_DIR$/.idea/GCtrabalhos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stardewManager/Interface/Interface.iml" filepath="$PROJECT_DIR$/stardewManager/Interface/Interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/oldStevePOO/oldStevePOO.iml" filepath="$PROJECT_DIR$/oldStevePOO/oldStevePOO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stardewManager/stardewManager.iml" filepath="$PROJECT_DIR$/stardewManager/stardewManager.iml" />
     </modules>
   </component>
 </project>
