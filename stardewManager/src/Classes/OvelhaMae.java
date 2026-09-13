@@ -2,14 +2,14 @@ package Classes;
 
 import Interface.Animal;
 
-public class GalinhaMae implements Animal {
+public class OvelhaMae implements Animal {
 
     public int id;
     public String nome;
     public String raca;
     public int idade;
 
-    public GalinhaMae(int id, String nome, String raca, int idade) {
+    public OvelhaMae(int id, String nome, String raca, int idade) {
         this.id = id;
         this.nome = nome;
         this.raca = raca;
@@ -18,11 +18,11 @@ public class GalinhaMae implements Animal {
 
     @Override
     public void coletarProduto() {
-        System.out.println(nome + " produziu ovos!");
+        System.out.println(nome + " produziu lã!");
     }
 
     @Override
     public void emitirSom() {
-        System.out.println("Som: Có-có!");
+        System.out.println("Som: Mééé!");
     }
 }

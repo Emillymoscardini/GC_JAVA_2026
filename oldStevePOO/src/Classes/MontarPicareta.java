@@ -28,8 +28,7 @@ public class MontarPicareta {
             return;
         }
         int blocosMinerados = 0;
-        for (int i = 0; i < quantidade; i++)
-        {
+        for (int i = 0; i < quantidade; i++) {
             if (durabilidade <= 0) {
             System.out.println("A picareta quebrou!"); break; }
             durabilidade--;

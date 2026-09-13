@@ -2,6 +2,6 @@ package Interface;
 
 public interface Animal {
 
-    void fazerSom();
+    void coletarProduto();
     void emitirSom();
 }
