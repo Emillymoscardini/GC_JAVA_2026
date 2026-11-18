@@ -1,4 +1,4 @@
-  /**
+/**
  * Sistema do guarda-roupa da Barbie.
  *
  * <p>ATENÇÃO: este código foi entregue pela equipe e a Barbie
@@ -24,11 +24,14 @@ public class GuardaRoupa {
      * <p>Regra: o desconto deve estar entre 0 e 100.
      * Fora disso, é erro de cadastro e deve avisar.</p>
      *
-     * @param preco      preço original do look
+     * @param preco preço original do look
      * @param percentual desconto de 0 a 100
      * @return preço final
      */
     public double precoComDesconto(double preco, double percentual) {
+        if (percentual < 0 || percentual > 100) {
+            throw new IllegalArgumentException("Percentual de desconto inválido");
+        }
         return preco - (preco * percentual / 100);
     }
 
@@ -41,7 +44,7 @@ public class GuardaRoupa {
      * @return true se couber no orçamento
      */
     public boolean cabeNoOrcamento(double preco) {
-        return preco < orcamento;
+        return preco <= orcamento;
     }
 
     /**
@@ -61,12 +64,13 @@ public class GuardaRoupa {
      *
      * @param preco valor pago pelo look
      */
-    public void registrarCompra(double preco) throws Exception {
-        if(preco > this.orcamento){
-            throw new Exception("O Preço do produto está a cima do orçamento");
+    public void registrarCompra(double preco) {
+        if (preco > this.orcamento) {
+            throw new IllegalArgumentException("Compra acima do orçamento");
         }
         this.orcamento = this.orcamento - preco;
     }
+
     /**
      * Devolve o orçamento restante.
      *

@@ -39,7 +39,7 @@ class GuardaRoupaTest {
     }
 
     @Test @DisplayName("Testando duas compras seguidas")
-    void verificaCompras(){
+    void verificaCompras() throws Exception {
 
         guardaRoupaBarbie.registrarCompra(100);
         assertEquals(400, guardaRoupaBarbie.getOrcamento());
@@ -47,11 +47,15 @@ class GuardaRoupaTest {
         assertEquals(300, guardaRoupaBarbie.getOrcamento());
     }
 
-    @Test @DisplayName("Compra fora do orcamento")
-    void verificaCompraAcimaOrcamento(){
+    @Test
+    @DisplayName("Compra acima do orçamento deve lançar exceção")
+    void verificaCompraAcimaOrcamento() {
+        IllegalArgumentException ex = assertThrows(
+                IllegalArgumentException.class,
+                () -> guardaRoupaBarbie.registrarCompra(600)
+        );
 
-        guardaRoupaBarbie.registrarCompra(600);
-        assertEquals(-100, guardaRoupaBarbie.getOrcamento());
+        assertEquals("Compra acima do orçamento", ex.getMessage());
+    }
 
     }
-}
