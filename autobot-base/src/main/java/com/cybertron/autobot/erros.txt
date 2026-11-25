@@ -1,0 +1,38 @@
+Erro 1: A lista por começar em 0, os indices ocupam um a menos que o tamanho.
+então é incorreto utilizar o sinal de = em size. vai conflitar com a quantidade de indices.
+Onde: GerenciadoraAutobots.java - calcularEnergonTotal()
+Boa prática violada: de fazer o código de maneira correta
+Correção: tirei o sinal de =
+
+Erro 2: o sinal de == compara o endereço na memória e o equals compara o conteúdo, então nesse caso
+é mais eficaz usar o equals já que queremos comparar se o nome é igual ou não.
+Onde: GerenciadorAutobots.java - buscar
+Boa prática violada: comparação das strings feita de maneira errada!
+Correção: Mudei de == para equals
+
+Erro 3: o bloco vazio não informa se ocorreu algum erro e nem qual
+Onde: GerenciadorAutobots.java - reparar
+Boa prática violada: tratamento de erros sem informar o erro,
+dificultando o processo de correção de problemas
+Correção: adicionei um sout informando o erro
+
+Erro 4: Os atributos estavam sendo acessados por outras classes sem nenhum tipo de controle
+Onde: Autobot.java - nome, energia e nivel
+Boa prática violada: do encapsulamento correto
+Correção: alterei nome, nivel e energia para private e criei gets para permitir a consulta dos valores.
+
+Erro 5: Uso de números soltos sem especificar
+Onde: GerenciadorAutobots.java - reparar e classificar
+Boa prática violada: Uso de números mágicos sem exolicação do porque estão lá
+Correção: Dei uma descrição para que os números não fiquem soltos
+
+Erro 6: Variaveis sem contexto no código
+Onde: Autobot.Java - construtor. GerenciadorAutobots.java - buscar e classificar
+Boa prática violada: Variaveis sem um nome claro explicando do que elas se tratam
+Correção: Alterei o nome de todas as variaveis que eram nomeadas por apenas uma letra
+ por um nome que representa a função delas.
+
+ Erro 7: Os comentários não estavam explicativos
+ Onde: Autobot.java - GerenciadorAutobots.java - Main.java
+ Boa prática violada: Os comentários estavam apenas repetindo o código
+ Correção: Refiz os comentários além de fazer novos para um melhor entendimento do código
